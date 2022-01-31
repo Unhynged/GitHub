@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knives "Daggers"</title>
+
+<!-- Styles -->
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: url("Images/knives.jpg") center;
+        background-size: cover;
+        font-family: Arial;
+        margin: 0;
+        padding: 0;
+    }
+
+/*Header/Blog Title */
+    .header {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 50px;
+    }
+
+    h1, h2 {
+        font-size: 32px;
+        font-family: papyrus, Verdana, sans-serif;
+        text-align: center;
+
+        background: -moz-linear-gradient(90deg, rgb(248, 6, 6), rgb(207, 15, 15), rgb(211, 0, 0));
+		background-clip: text; 
+		-moz-text-fill-color: transparent; 
+		background: -ms-linear-gradient(90deg,rgb(248, 6, 6), rgb(207, 15, 15), rgb(211, 0, 0));
+		-ms-background-clip: text; 
+		-ms-text-fill-color: transparent; 
+		background: -webkit-linear-gradient(90deg,rgb(248, 6, 6), rgb(207, 15, 15), rgb(211, 0, 0));
+	    -webkit-background-clip: text;
+		-webkit-text-fill-color: transparent; 
+    }
+
+/* Nameplate */
+    .nameplate {
+        font-family:papyrus, Verdana, sans-serif;
+        font-size: 4em;
+        font-style: italic;
+        text-align: center;
+        text-shadow:2px 4px 3px rgba(25,25,25);  
+    }
+    p {
+        background-color: rgba(3, 141, 83, 0.315);
+        color:rgb(233, 225, 235);
+        font-family:papyrus, Verdana, sans-serif;
+        font-size:18px;
+        font-weight: 700;
+        text-shadow: 1px 3px 3px black;
+    }
+
+
+/* Create two unequal columns that float next to each other */
+/* Left Column */
+    .leftcolumn {
+        float: left;
+        width: 50%;
+    }
+
+/* Right Column */
+    .rightcolumn {
+        float: left;
+        width: 50%;
+    /*    padding-left: 20px;*/
+    }
+
+/* Add a card effect for articles */
+    .card {
+        padding: 20px;
+        margin-top: 20px; 
+    }
+
+/* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+/* Footer */
+    .footer {
+        border: 10px groove goldenrod;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+        background: url("Images/mushroomforest.jpg") center;
+    }
+
+/*  Navigation Bar  */
+    .navbar {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        border: 10px groove goldenrod;
+    }
+    .navbar ul {
+        position: sticky;
+        list-style: none;
+        background: url("Images/bannerbackground.jpg");
+        background-position:center;
+        background-size: 1200px 860px;
+        padding: 10px;
+        margin: 0;
+        text-align: center;
+    }
+    .navbar li {
+        display: inline-block;
+        text-align: center;
+        border-radius: 20px;
+    }
+    .navbar a{
+        text-decoration: none;
+        color: #fff;
+        width: 138px;
+        display: block;
+        padding: 10px;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        font-family: papyrus, Verdana, sans-serif;
+        border-radius: 20px;
+    }
+    .navbar a:hover {
+        background-position:center; 
+        color:gold;
+        border-radius: 10px;
+        transform: scale(1.5);
+    }
+    .navbar li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        border-radius: 20px;
+    }
+    .navbar li a:hover, .dropdown:hover .dropbtn {
+        background: url("images/bannerbackground.jpg"); 
+        background-size: 400px 320px;
+        border-radius: 20px;
+    } 
+    .navbar li.dropdown {
+        display: inline-block;
+        border-radius: 20px;
+    }
+    .navbar .dropdown-content {
+        display: none;
+        position: absolute;
+        background:url("images/cauldronentrance.jpg");
+        background-size:400px 320px;
+        background-position:center;
+        z-index: 1;
+        border-radius: 20px;
+    }
+    .navbar .dropdown-content a {
+        color: white;
+        border-radius: 20px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .navbar .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .navbar .dropdown:hover .dropdown-content {
+        display: block;
+    } 
+
+@media screen and (max-width: 1030px) {
+    .header {
+        margin-top: -10px;
+        padding: 2px;
+    }
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 32px; 
+    }
+
+    h5 {
+        font-size: 26px; 
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        padding: 0;
+        width: 100%;
+    }
+
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+
+    .img1, .img2, .img3 {
+        float: left;
+    }
+}
+@media screen and (max-width: 540px) {
+    .nameplate {
+        font-size: 2em;
+    }
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .header {
+        font-size: 1.25em;
+        margin-top: -10px;
+        padding: 2px;
+    }
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.1em;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 28px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+}
+
+@media screen and (max-width: 290px) {
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.1em;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px; 
+    }
+
+    h5 {
+        font-size: 18px; 
+    }
+
+    .button {
+        font-size: 12px;
+    }
+}
+
+/* musical notes */
+    div {
+        background: rgba(71, 61, 47, 0.001);
+    }
+    div.notes, div.notes::before, div.notes::after {
+        position:absolute;
+        margin-left: 200px;
+    }
+
+    div.notes {
+        --height: 40vmin;
+        --bellow-width: 50vmin;
+
+        --note-color1: rgba(199, 199, 199, 0.959);
+        --note-color2: rgba(80, 79, 79, 0.897);
+        --note-color3: rgba(178, 186, 194, 0.486);
+        --note-x1: -10vmin;
+        --note-x2: -16vmin;
+        --note-x3: -8vmin;
+
+        --notes-full-1: var(--note-x1) 5vmin 0vmin var(--note-color1),
+        var(--note-x2) 25vmin 0vmin var(--note-color2),
+        var(--note-x3) 37.5vmin 0vmin var(--note-color3);
+        --notes-full-2: -8vmin 5vmin 0vmin rgba(199, 199, 199, 0.8),
+        -10vmin 25vmin 0vmin rgba(80, 79, 79, 0.658),
+        -14min 37.5vmin 0vmin rgba(178, 186, 194, 0.48);
+        --notes-full-3: -12vmin 5vmin 0vmin rgba(199, 199, 199, 0.2),
+        -8vmin 25vmin 0vmin rgba(80, 79, 79, 0.932),
+        -16vmin 37.5vmin 0vmin rgba(248, 14, 6, 0.8);
+        --notes-full-4: -16vmin 5vmin 0vmin rgba(178, 186, 194, 0.4),
+        -13vmin 25vmin 0vmin rgba(182, 0, 76, 0.911),
+        -9vmin 37.5vmin 0vmin rgba(80, 79, 79, 0.23);
+    }
+    div.notes {
+        width: var(--bellow-width);
+        height: calc(var(--height) + 5vmin);
+        color: rgba(0,0,0,0);
+        font-size: 14vmin;
+        
+        margin-top: -100px;
+
+        text-shadow: var(--notes-full-1);
+
+        will-change: text-shadow;
+        animation: note-float 2000ms infinite alternate ease-in-out;
+    }
+    @keyframes note-float {
+        30% {
+            text-shadow: var(--notes-full-2);
+        }
+        60% {
+            text-shadow: var(--notes-full-3);
+        }
+        100% {
+            text-shadow: var(--notes-full-4);
+        }
+    }
+
+/* Image Icons */
+.container {
+        display: inline-block;
+        padding: 5px;
+        position: relative; 
+        width: 24%;
+    }
+
+    img {
+        border: 5px groove goldenrod;
+        display: inline-block;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #008cba;
+    }
+
+    .container:hover .overlay {
+        opacity: 0.85;
+    }
+
+    .text {
+        color: white;
+        font-size: 16px;
+        
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        
+        text-align: center;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+</style>
+</head>
+
+
+<body>
+
+<!-- Navigation -->    
+<div class="navbar">
+    <ul>
+        <li><a href="index.html">Home </a></li>
+        <li><a href="cauldron.html">Cauldron </a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Heroes </a>
+            <div class="dropdown-content">
+                <a href="lily.html">Lily</a>
+                <a href="coolracoon.html">Cool Racoon</a>
+                <a href="#knives">Knives</a>
+            </div>
+        </li>
+        <li><a href="importantnpcs.html">NPCS </a></li>
+        <li><a href="villians.html">Villians </a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Story</a>
+            <div class="dropdown-content">
+                <a href="prologue.html">Prologue</a>
+                <a href="chapter1.html">Chapter I</a>
+                <a href="chapter2.html">Chapter II</a>
+                <a href="chapter3.html">Chapter III</a>
+            </div>
+        </li>
+    </ul>
+</div> 
+
+<!-- Row -->
+<div class="row">
+
+    <!-- Left Column -->
+    <div class="leftcolumn">
+        <div class="card">
+            <h1 class="nameplate">Knives "Daggers"</h1>
+            <div class="notes">▬ι═ﺤ</div><br><br><br><br><br><br><br>
+            <div class="notes">▬ι═ﺤ</div>
+        </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="rightcolumn">
+        <div>
+            <p>The standard Lorem Ipsum passage, used since the 1500s<br>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC<br>
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+            <div class="container">
+                <img src="Images/melee.png" alt="Melee" class="image">
+                <div class="overlay">
+                    <div class="text">Melee - Uses two daggers to backstab his enemies!</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="Images/stealth.png" alt="Stealth" class="image">
+                <div class="overlay">
+                    <div class="text">Stealth: Stealth, Guile and Deception to get past foes!</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="Images/poison.png" alt="Sneak Attack" class="image">
+                <div class="overlay">
+                    <div class="text">Sneak Attack: Deliver devastating damage against enemies who are vulnerable!</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="Images/lockpick.jpg" alt="Melee" class="image">
+                <div class="overlay">
+                    <div class="text">Thievery: Pick Pockets, Open Locks and Disarm Traps to get at what you want!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <h2>Knive's (Daggers!) Adventures Continue!</h2>
+</div>
+
+</body>
+</html>

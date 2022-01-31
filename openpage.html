@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body {
+        background: url("images/dungeonentrance.jpg") no-repeat center fixed;
+        background-size: cover;
+    }
+    a {
+        text-decoration: none;
+        margin: 3px;
+        padding: 3px;
+        color: tomato;
+        text-shadow: 2px 2px 2px black;
+        font-family: papyrus, Verdana, sans-serif;
+        border:2px solid black;
+        border-radius: 15px;
+        background-image: url("images/dungeonbrick.jpg");
+        background-size: 350px 520px;
+        background-repeat: no-repeat;
+        box-shadow: 5px 5px 5px black;
+        font-size: 40px;
+    }
+    a:hover {
+        background-image: url("images/movingfire.gif");
+        background-position:center;
+    } 
+    .plaque {
+        position:absolute;
+        margin: 0;
+        top: 100px;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+</head>
+<body>
+    <div class="plaque">
+        <p data-file="lidcreak"><a href="index.html">Enter if you dare...</a></p>
+    </div>
+    <audio id="a" src=""></audio>
+<script>
+    document.addEventListener('DOMContentLoaded', init);
+    function init(){
+        let p1 = document.querySelector('p[data-file]');
+        p1.addEventListener('mouseover', play);
+    }
+    function play(ev){
+        let p = ev.currentTarget;
+        ev.preventDefault();
+
+        let fn = p.getAttribute('data-file');
+        let src = './audio/' + fn + '.mp3';
+        console.log(src);
+        let audio = document.createElement('audio');
+        audio.src = src;
+        audio.play();
+    }
+</script>
+</body>
+</html>

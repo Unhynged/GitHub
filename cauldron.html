@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City of Cauldron</title>
+
+<style>
+/* Styles */
+
+/*  Body    */
+    body {
+        background: url("images/cauldronmap.png") no-repeat fixed;
+        background-size: cover;
+        background-position:center;    
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    p {
+        font-family: papyrus, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+/*Header/Blog Title */
+    .header {
+        border: 10px groove goldenrod;
+        color:crimson;
+        font-family: papyrus, Verdana, sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        padding: 5px;
+        text-align: center;
+        text-shadow: 1px 5px 3px black;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-family: papyrus, Verdana, sans-serif;
+        font-size: 28px;
+        color: white;
+    }
+
+    .lingrad1 {
+        background: -moz-linear-gradient(90deg, black, gray);
+		background-clip: text; 
+		-moz-text-fill-color: transparent; 
+		background: -ms-linear-gradient(90deg,black, gray);
+		-ms-background-clip: text; 
+		-ms-text-fill-color: transparent; 
+		background: -webkit-linear-gradient(90deg,black, gray);
+	    -webkit-background-clip: text;
+		-webkit-text-fill-color: transparent; 
+    }
+
+    .lingrad2 {
+        background: -moz-linear-gradient(90deg, rgb(51, 8, 8), crimson);
+		background-clip: text; 
+		-moz-text-fill-color: transparent; 
+		background: -ms-linear-gradient(90deg,rgb(51, 8, 8), crimson);
+		-ms-background-clip: text; 
+		-ms-text-fill-color: transparent; 
+		background: -webkit-linear-gradient(90deg,rgb(51, 8, 8), crimson);
+	    -webkit-background-clip: text;
+		-webkit-text-fill-color: transparent; 
+    }
+
+    .h2head {
+        background: -moz-linear-gradient(90deg, white, #808080);
+		background-clip: text; 
+		-moz-text-fill-color: transparent; 
+		background: -ms-linear-gradient(90deg,white, #808080);
+		-ms-background-clip: text; 
+		-ms-text-fill-color: transparent; 
+		background: -webkit-linear-gradient(90deg,white, #808080);
+	    -webkit-background-clip: text;
+		-webkit-text-fill-color: transparent; 
+    }
+
+    h3 {
+        color: white;
+        font-family: papyrus, Verdana, sans-serif;
+        font-size: 24px;
+        text-align: center;
+        text-shadow: 1px 3px 2px black;
+    }
+
+    h5 {
+        font-family: papyrus, Verdana, sans-serif;
+        font-size: 20px;
+    }
+
+/* Create three columns that float next to each other */
+/* Left Column */
+    .leftcolumn {
+        float: left;  
+        margin-top: -20px;
+        width: 33.33%;
+    }
+
+/* Middle Column */
+    .middlecolumn {
+        float: left;
+        margin-top: -20px;
+        width: 33.33%;
+    }
+
+/* Right Column */
+    .rightcolumn {
+        background:url("Images/cauldronentrance.jpg") center;
+        background-size:cover;
+        float: left;
+        padding-left: 20px;
+        width: 33.33%;
+    }
+
+/* Add a card effect for articles */
+    .card {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .card1 {
+	    background-image: linear-gradient(goldenrod, #836953, #986960, brown, #bc8f8f, saddlebrown);
+    }
+
+    .card2 {
+        background-image: linear-gradient(#848482, #808080, magenta, #8601af, #696969);
+    }
+
+    .card3 {
+        background-image: url("Images/terrain.jpg");
+    }
+
+    .card4 {
+        background-image: url("images/locknkey.jpg");
+        background-size: cover;
+    }
+    
+    .card5 {
+        background-image: url("images/ancientdungeon.jpg");
+        background-size:cover;
+        margin-top: -20px;
+    }
+
+/* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+/* Footer */
+    .footer {
+        border: 10px groove goldenrod;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+        background: url("Images/mushroomforest.jpg") center;
+    }
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .middlecolumn, .rightcolumn {
+        padding: 0;
+        width: 100%;
+    }
+
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 420px) {
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+}
+
+@media screen and (max-width: 380px) {
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.1em;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 28px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+}
+
+@media screen and (max-width: 290px) {
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.1em;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px; 
+    }
+
+    h5 {
+        font-size: 18px; 
+    }
+}
+
+/*  Navigation Bar  */
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 10px groove goldenrod;
+    }
+
+.navbar ul {
+    position: sticky;
+    list-style: none;
+    background: url("Images/bannerbackground.jpg");
+    background-position:center;
+    background-size: 1200px 860px;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    }
+
+.navbar li {
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    }
+
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+    width: 138px;
+    display: block;
+    padding: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-family: papyrus, Verdana, sans-serif;
+    border-radius: 20px;
+    }
+
+.navbar a:hover {
+    background-position:center; 
+    color:gold;
+    border-radius: 10px;
+    transform: scale(1.5);
+    }
+
+.navbar li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 20px;
+    }
+
+.navbar li a:hover, .dropdown:hover .dropbtn {
+    background: url("images/bannerbackground.jpg"); 
+    background-size: 400px 320px;
+    border-radius: 20px;
+    } 
+
+.navbar li.dropdown {
+    display: inline-block;
+    border-radius: 20px;
+    }
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background:url("images/cauldronentrance.jpg");
+    background-size:400px 320px;
+    background-position:center;
+    z-index: 1;
+    border-radius: 20px;
+    }
+
+.navbar .dropdown-content a {
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    }
+
+.navbar .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    }
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+    } 
+
+/* Cards */
+    .card {
+        border: 10px groove goldenrod;
+    }
+
+</style>
+
+</head>
+
+
+<body>
+
+<!-- Navigation -->    
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home </a></li>
+            <li><a href="#cauldron">Cauldron </a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Heroes </a>
+                <div class="dropdown-content">
+                    <a href="lily.html">Lily</a>
+                    <a href="coolracoon.html">Cool Racoon</a>
+                    <a href="knives.html">Knives</a>
+                </div>
+            </li>
+            <li><a href="importantnpcs.html">NPCS </a></li>
+            <li><a href="villians.html">Villians </a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Story</a>
+                <div class="dropdown-content">
+                    <a href="prologue.html">Prologue</a>
+                    <a href="chapter1.html">Chapter I</a>
+                    <a href="chapter2.html">Chapter II</a>
+                    <a href="chapter3.html">Chapter III</a>
+                </div>
+            </li>
+        </ul>
+    </div> 
+
+<!-- Header -->
+<div class="header">
+    <h1>Cauldron City</h1>
+    <p>The locations of the city of Cauldron.</p>
+</div>
+
+<!-- Row -->
+<div class="row">
+
+    <!-- Left Column -->
+    <div class="leftcolumn">
+        <div class="card card1">
+            <h2 class="lingrad1">Tygots Old Things</h2>
+            <h5>Well stocked antiquity shop on Lava Avenue</h5>
+            <div><img src="Images/TygotsOldThings.png"><span style="color:white;font-family: papyrus, Verdana, sans-serif; font-size: 22px; padding: 15px;">Tygot Mispas and his blink dog, Lepook.</span></div>
+            <p>Tygot Mispas a 60-year-old halfling retired from adventuring for two decades, owns a small but well-stocked antiquity shop on Lava Avenue specializing in nonmagical art objects gathered from across the known world. Tygot himself has excellent commercial contacts in the capital city of Sasserine, and frequently buys old documents and art objects from local adventurers. Tygot's best customers include the lord mayor himself and many nobles in Cauldron (including Lord Vhalantru).</p>
+            <p>His shop is a two-story structure with a small flat on the upper floor and a well-organized business area on the lower. Tygot shares the place with Lepook, an elderly and lazy blink dog that agreed to spend his old age with his "civilized" friend. Lepook keeps watch on the shop and on Tygot as well, acting as his "conscience" when the halfling's greed rears up.</p> 
+            <p>The main shop itself contains an impressive assortment of less valuable antiquities, mostly vases, statuettes, small furniture, and tapestries. Tygot keeps his most precious wares in the basement, where no fewer than thirty art objects worth an average of 300 gp each, can be found. The door that leads down to the basement is made of steel and is locked with two masterwork locks requiring different keys. Apart from the occasional trip to the Coy Nixie for a frugal meal, Tygot spends his free time writing his memoir and casting diminutive plaster replicas of Cauldron's monuments (the Town Hall, the Cathedral of Azuth, the Lakeside Pavilion, etc.). He sells these replicas in his shop for 1 gp each.</p>
+        </div>
+    </div>
+
+    <!-- Middle Column -->
+    <div class="middlecolumn">
+        <div class="card card2">
+            <h2 class="lingrad2">Cathedral of Azuth</h2>
+            <div><img src="Images/ChurchofAzuth.png"><span style="color: white;font-family: papyrus, Verdana, sans-serif; font-size: 18px;">The Cathedral of Azuth towers over most of the city.</span></div>
+            <p>This towering structure is one of the most impressive and beautiful in Cauldron. The church of Azuth has always been powerful in Cauldron, but not as well liked as the churches of Tempus or Helm, since the clerics of this church tend to be standoffish, curt, and even creepy. The clerics of Azuth are responsible for dealing with the unclaimed dead of Cauldron, and maintain vast catacombs for anyone who's rich enough to afford the burial but doesn't have a personal crypt. Most of the dead of Cauldron are cremated.</p> 
+            <p>The cathedral is run by Embril Aloustinai, although she rarely sees visitors and leaves the day-to-day operations to a cleric named Ike Iverson. The cathedral is also staffed by a cleric named Calmus Vel, ten clerics and ten acolytes in training.</p>
+        </div>
+        <div class="card card5">
+            <h2 style="text-shadow: 1px 3px 3px black;">Player Map of Jzadirune</h2>
+            <div><img src="Images/jzadirunemap.png"><span style="color: white; font-family: papyrus, Verdana, sans-serif; font-size: 24px; padding: 15px;">Jzadirune</span></div>
+            <div><img src="Images/geardoor.png"><p style="text-align: center; color: white; text-shadow: 1px 3px 3px black;">Gear Door Diagram</p></div>
+        </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="rightcolumn" style="border: 10px groove goldenrod;">
+        <div class="card card3">
+            <h2 class="h2head">Land around Cauldron</h2>
+            <div><img src="Images/cauldronenvirons.png"></div>
+            <p style="color: white;">Some text..</p>
+            <p style="color: white;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="card card4">
+            <h3>Lock and Key</h3>
+            <div><img src="Images/clue.png"><p style="text-align: center; color: white; text-shadow: 1px 3px 3px black;">Mysterious Riddle</p></div>
+            <div><img src="Images/keyganghelve.png"><p style="text-align: center; color: white; text-shadow: 1px 3px 3px black;">Keygan Ghelve</p></div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <h2 style="color: white;">Explore all of Cauldron!</h2>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lily Rubyredstones</title>
+
+<!-- Styles -->
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: url("Images/lily3.jpg") no-repeat center;
+        background-size: cover;
+        font-family: Arial;
+        margin: 0;
+        padding: 0;
+    }
+
+/*Header/Blog Title */
+    .header {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-family: papyrus, Verdana, sans-serif;
+        text-align: center;
+
+        background: -moz-linear-gradient(90deg, rgba(208, 6, 248), rgba(247, 7, 255), rgba(248, 15, 209));
+		background-clip: text; 
+		-moz-text-fill-color: transparent; 
+		background: -ms-linear-gradient(90deg,rgba(208, 6, 248), rgba(247, 7, 255), rgba(248, 15, 209));
+		-ms-background-clip: text; 
+		-ms-text-fill-color: transparent; 
+		background: -webkit-linear-gradient(90deg,rgba(208, 6, 248), rgba(247, 7, 255), rgba(248, 15, 209));
+	    -webkit-background-clip: text;
+		-webkit-text-fill-color: transparent; 
+    }
+
+/* Nameplate */
+    .nameplate {
+        color:darkorchid;
+        font-family:papyrus, Verdana, sans-serif;
+        font-size: 4em;
+        font-style: italic;
+        text-align: center;
+        text-shadow:2px 4px 3px rgba(25,25,25);
+    }
+    p {
+        background-color: rgba(245, 160, 238, 0.315);
+        color:rgb(72, 0, 85);
+        font-family:papyrus, Verdana, sans-serif;
+        font-size:18px;
+        font-weight: 700;
+    }
+
+/* Create two unequal columns that float next to each other */
+/* Left Column */
+    .leftcolumn {
+        float: left;
+        width: 50%;
+    }
+
+/* Right Column */
+    .rightcolumn {
+        float: left;
+        width: 50%;
+    }
+
+/* Clear floats after the columns */
+    .row:after {
+        clear: both;
+        content: "";
+        display: table;
+        
+    }
+
+/* Footer */
+    .footer {
+        background: url("Images/mushroomforest.jpg") center;
+        border: 10px groove goldenrod;
+        margin-top: 20px;
+        padding: 20px;
+        text-align: center;  
+    }
+
+/*  Navigation Bar  */
+    .navbar {
+        border: 10px groove goldenrod;
+        margin: 0;
+        padding: 0;
+        text-align: center;  
+    }
+    .navbar ul {
+        background: url("Images/bannerbackground.jpg");
+        background-position:center;
+        background-size: 1200px 860px;
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        position: sticky;  
+        text-align: center;
+    }
+    .navbar li {
+        border-radius: 20px;
+        display: inline-block;
+        text-align: center;
+    }
+    .navbar a{
+        border-radius: 20px;
+        color: #fff;
+        display: block;
+        text-align: center;
+        font-family: papyrus, Verdana, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 138px;
+    }
+    .navbar a:hover {
+        background-position:center; 
+        border-radius: 10px;
+        color:gold;
+        transform: scale(1.5);
+    }
+    .navbar li a, .dropbtn {
+        border-radius: 20px;
+        color: white;
+        display: inline-block;
+        padding: 14px 16px;
+        text-align: center;
+        text-decoration: none;
+    }
+    .navbar li a:hover, .dropdown:hover .dropbtn {
+        background: url("images/bannerbackground.jpg"); 
+        background-size: 400px 320px;
+        border-radius: 20px;
+    } 
+    .navbar li.dropdown {
+        border-radius: 20px;
+        display: inline-block;
+    }
+    .navbar .dropdown-content {
+        background:url("images/cauldronentrance.jpg");
+        background-size:400px 320px;
+        background-position:center;
+        border-radius: 20px;
+        display: none;
+        position: absolute;
+        z-index: 1;
+    }
+    .navbar .dropdown-content a {
+        color: white;
+        border-radius: 20px;
+        display: block;
+        text-align: left;
+        text-decoration: none;
+    }
+    .navbar .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .navbar .dropdown:hover .dropdown-content {
+        display: block;
+    } 
+
+@media screen and (max-width: 1030px) {
+    .header {
+        margin-top: -10px;
+        padding: 2px;
+    }
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 32px; 
+    }
+
+    h5 {
+        font-size: 26px; 
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        padding: 0;
+        width: 100%;
+    }
+
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 540px) {
+
+    .nameplate {
+        font-size: 2em;
+    }
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .header {
+        font-size: 1.25em;
+        margin-top: -10px;
+        padding: 2px;
+    }
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.1em;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 28px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+}
+
+@media screen and (max-width: 290px) {
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.1em;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px; 
+    }
+
+    h5 {
+        font-size: 18px; 
+    }
+}
+
+/* musical notes */
+    div {
+        background: rgba(71, 61, 47, 0.001);
+    }
+    div.notes, div.notes::before, div.notes::after {
+        position:absolute;
+        margin-left: 200px;
+    }
+
+    div.notes {
+        --height: 40vmin;
+        --bellow-width: 50vmin;
+
+        --note-color1: rgba(248, 15, 209, 0.3);
+        --note-color2: rgba(247, 7, 255, 0.719);
+        --note-color3: rgba(208, 6, 248, 0.486);
+        --note-x1: -10vmin;
+        --note-x2: -16vmin;
+        --note-x3: -8vmin;
+
+        --notes-full-1: var(--note-x1) 5vmin 0vmin var(--note-color1),
+        var(--note-x2) 25vmin 0vmin var(--note-color2),
+        var(--note-x3) 37.5vmin 0vmin var(--note-color3);
+        --notes-full-2: -8vmin 5vmin 0vmin rgba(248, 15, 209,.8),
+        -10vmin 25vmin 0vmin rgba(247, 7, 255, 0.658),
+        -14min 37.5vmin 0vmin rgba(208, 6, 248,.48);
+        --notes-full-3: -12vmin 5vmin 0vmin rgba(248, 15, 209,.2),
+        -8vmin 25vmin 0vmin rgba(212, 137, 214, 0.932),
+        -16vmin 37.5vmin 0vmin rgba(208, 6, 248,.8);
+        --notes-full-4: -16vmin 5vmin 0vmin rgba(248, 15, 209,.4),
+        -13vmin 25vmin 0vmin rgba(247, 7, 255, 0.911),
+        -9vmin 37.5vmin 0vmin rgb(178, 113, 190);
+    }
+    div.notes {
+        width: var(--bellow-width);
+        height: calc(var(--height) + 5vmin);
+        color: rgba(0,0,0,0);
+        font-size: 14vmin;
+        
+        margin-top: -100px;
+
+        text-shadow: var(--notes-full-1);
+
+        will-change: text-shadow;
+        animation: note-float 2000ms infinite alternate ease-in-out;
+    }
+    @keyframes note-float {
+        30% {
+            text-shadow: var(--notes-full-2);
+        }
+        60% {
+            text-shadow: var(--notes-full-3);
+        }
+        100% {
+            text-shadow: var(--notes-full-4);
+        }
+    }
+
+/* Button Icons */
+    .container {
+        display: inline-block;
+        padding: 5px;
+        position: relative; 
+        width: 24%;
+    }
+
+    img {
+        border: 5px groove goldenrod;
+        display: inline-block;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #008cba;
+    }
+
+    .container:hover .overlay {
+        opacity: 0.85;
+    }
+
+    .text {
+        color: white;
+        font-size: 16px;
+        
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        
+        text-align: center;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+
+</style>
+</head>
+
+
+<body>
+
+<!-- Navigation -->    
+<div class="navbar">
+    <ul>
+        <li><a href="index.html">Home </a></li>
+        <li><a href="cauldron.html">Cauldron </a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Heroes </a>
+            <div class="dropdown-content">
+                <a href="#lily">Lily</a>
+                <a href="coolracoon.html">Cool Racoon</a>
+                <a href="knives.html">Knives</a>
+            </div>
+        </li>
+        <li><a href="importantnpcs.html">NPCS </a></li>
+        <li><a href="villians.html">Villians </a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Story</a>
+            <div class="dropdown-content">
+                <a href="prologue.html">Prologue</a>
+                <a href="chapter1.html">Chapter I</a>
+                <a href="chapter2.html">Chapter II</a>
+                <a href="chapter3.html">Chapter III</a>
+            </div>
+        </li>
+    </ul>
+</div> 
+
+<!-- Row -->
+<div class="row">
+
+    <!-- Left Column -->
+    <div class="leftcolumn">
+        <div class="card">
+            <h1 class="nameplate">Lily Rubyredstones</h1>
+            <div class="notes">♬</div><br><br><br><br><br><br><br>
+            <div class="notes">♬</div>
+        </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="rightcolumn">
+        <div>
+            <div class="container">
+                <img src="Images/bardicmusic.png" alt="Bardic Music" class="image">
+                <div class="overlay">
+                    <div class="text">Bardic Music: Uses Music to Inspire Allies and Charm Monsters!es!</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="Images/bardicmagic1.png" alt="Bardic Magic" class="image">
+                <div class="overlay">
+                    <div class="text">Magic: Heal, Cast Illusions and Enthrall Enemies!</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="Images/stealth.png" alt="Stealth" class="image">
+                <div class="overlay">
+                    <div class="text">Stealth: Little Sneaks past her foes!</div>
+                </div>
+            </div>
+            <div class="container">
+                <img src="Images/melee.png" alt="Melee" class="image">
+                <div class="overlay">
+                    <div class="text">Melee - Slice and Dice your foes!</div>
+                </div>
+            </div>
+            <p>The standard Lorem Ipsum passage, used since the 1500s<br>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC<br>
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <h2>Lily's Adventures Continue!</h2>
+</div>
+
+</body>
+</html>

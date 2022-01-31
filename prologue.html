@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story - Prologue</title>
+<style>
+/*  Body    */
+    body {
+        margin: 0;
+        padding: 0;
+        background: url("images/gnomeforest.jpg") no-repeat center fixed;
+        background-size: cover;
+    } 
+
+    /*Header/Blog Title */
+    .header {
+        color: goldenrod;
+        font-family: papyrus, Verdana, sans-serif;
+        font-size: 1.5em;
+        margin-top: -50px;
+        padding: 5px;
+        text-align: center;
+        text-shadow: 3px 5px 1px black;
+    }
+
+    h1:first-letter {
+        font-size: 2em;
+        font-family: papyrus, Verdana, sans-serif;
+        font-weight: 900;
+    }
+
+    h2:first-letter {
+        font-size: 1.5em;
+        font-family: papyrus, Verdana, sans-serif;
+        font-weight: 500;
+    }
+
+    .header h1 {
+        font-size: 50px;
+    }
+
+    h1 {
+        color: goldenrod;
+        font-family: papyrus, Verdana, sans-serif;
+        font-size: 40px; 
+        font-weight: bold; 
+        text-align: center; 
+        text-shadow: 1px 3px 1px black;
+    }
+
+    h2 {
+        color: goldenrod;
+        font-family: papyrus, Verdana, sans-serif;
+        font-size: 28px; 
+        font-weight: bold; 
+        text-align: center; 
+        text-shadow: 1px 3px 1px black;
+    }
+
+    h5 {
+        color: goldenrod;
+        font-family: papyrus, Verdana, sans-serif;
+        font-size: 22px; 
+        font-weight: bold; 
+        text-align: center; 
+        text-shadow: 1px 3px 1px black; 
+    }
+
+    p {
+        font-family: papyrus, Verdana, sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    /* Clear floats after the columns */
+    .navbar:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+
+    .row:after {
+        clear: both;
+        content: "";
+        display: table;  
+    }
+
+/* Footer */
+    .footer {
+        background: url("Images/mushroomforest.jpg") center;
+        border: 10px groove goldenrod;
+        padding: 20px; 
+        text-align: center;
+        position: auto;
+        bottom: 0px;
+    }
+
+/*  Navigation Bar  */
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 10px groove goldenrod;
+}
+.navbar ul {
+    position: sticky;
+    list-style: none;
+    background: url("Images/bannerbackground.jpg");
+    background-position:center;
+    background-size: 1200px 860px;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+.navbar li {
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+}
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+    width: 138px;
+    display: block;
+    padding: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-family: papyrus, Verdana, sans-serif;
+    border-radius: 20px;
+}
+.navbar a:hover {
+    background-position:center; 
+    color:gold;
+    border-radius: 10px;
+    transform: scale(1.5);
+}
+.navbar li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.navbar li a:hover, .dropdown:hover .dropbtn {
+    background: url("images/bannerbackground.jpg"); 
+    background-size: 400px 320px;
+    border-radius: 20px;
+} 
+.navbar li.dropdown {
+    display: inline-block;
+    border-radius: 20px;
+}
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background:url("images/cauldronentrance.jpg");
+    background-size:400px 320px;
+    background-position:center;
+    z-index: 1;
+    border-radius: 20px;
+}
+.navbar .dropdown-content a {
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.navbar .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+} 
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1030px) {
+    .header {
+        margin-top: -10px;
+        padding: 2px;
+    }
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 32px; 
+    }
+
+    h5 {
+        font-size: 26px; 
+    }
+
+    .dnd {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        padding: 0;
+        width: 100%;
+    }
+
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+
+    .img1, .img2, .img3 {
+        float: left;
+    }
+}
+@media screen and (max-width: 540px) {
+
+    .header {
+        font-size: 1.25em;
+        margin-top: -10px;
+        padding: 2px;
+    }
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+
+    .dnd {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .header {
+        font-size: 1.25em;
+        margin-top: -10px;
+        padding: 2px;
+    }
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+
+    .dnd {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    .header {
+        font-size: 1.25em;
+        margin-top: -10px;
+        padding: 2px;
+    }
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.15em;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+
+    .dnd {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .header {
+        font-size: 1.2em;
+        margin-top: -10px;
+        padding: 2px;
+    }
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.1em;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 28px; 
+    }
+
+    h5 {
+        font-size: 20px; 
+    }
+
+    .dnd {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+
+    .header {
+        font-size: 1.1em;
+        margin-top: -10px;
+        padding: 2px;
+    }
+
+    h1:first-letter {
+        font-size: 1.5em;
+    }
+
+    h2:first-letter {
+        font-size: 1.1em;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px; 
+    }
+
+    h5 {
+        font-size: 18px; 
+    }
+
+    .dnd {
+        font-size: 18px;
+    }
+}
+
+.story {
+    background: url("Images/blankpage.jpg");
+    background-size: cover;
+    border:10px groove goldenrod;
+    width: 42.5%;
+}
+
+.story1 {
+    margin: 15px;
+    padding: 10px; 
+    }
+
+.story:after {
+        clear: both;
+        content: "";
+        display: table;  
+    }
+
+
+.nextButton {
+    border: 3px solid goldenrod;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 2em;
+    color: crimson;
+    text-decoration: none;
+    background-color: gray;
+    background: url("Images/flamearrow.gif") center;
+    background-size: cover;
+    float:right;
+}
+
+/* Footer */
+.footer {
+        background: url("Images/mushroomforest.jpg") center;
+        border: 10px groove goldenrod;
+        padding: 20px;
+        text-align: center;
+    }
+
+</style>
+</head>
+<body>
+    <!-- Navigation -->    
+<div class="navbar">
+    <ul>
+        <li><a href="index.html">Home </a></li>
+        <li><a href="cauldron.html">Cauldron </a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Heroes </a>
+            <div class="dropdown-content">
+                <a href="lily.html">Lily</a>
+                <a href="coolracoon.html">Cool Racoon</a>
+                <a href="knives.html">Knives</a>
+            </div>
+        </li>
+        <li><a href="importantnpcs.html">NPCS </a></li>
+        <li><a href="villians.html">Villians </a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Story</a>
+            <div class="dropdown-content">
+                <a href="#prologue">Prologue</a>
+                <a href="chapter1.html">Chapter I</a>
+                <a href="chapter2.html">Chapter II</a>
+                <a href="chapter3.html">Chapter III</a>
+            </div>
+        </li>
+    </ul>
+</div> 
+
+<div class="container">
+    <div class="story">
+        <h1>Prologue</h1>
+        <div class="story1"><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p><br>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p><br>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p><br>
+        <a class="nextButton" href="chapter1.html">Next</a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <h2>Enjoy the adventure and write your own stories!</h2>
+</div>
+
+</body>
+</html>
